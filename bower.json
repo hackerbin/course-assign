@@ -1,0 +1,25 @@
+{
+  "name": "course-assign",
+  "version": "1.0.0",
+  "homepage": "https://github.com/nurulhudarobin/course-assign",
+  "authors": [
+    "Nurul Huda Robin <robin@dexsa.org>"
+  ],
+  "description": "simple course assign app",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "public/lib",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "jquery": "~2.1.1",
+    "bootstrap": "~3.3.1",
+    "angular": "~1.3.3",
+    "angular-resource": "~1.3.3",
+    "angular-route": "~1.3.3"
+  }
+}
