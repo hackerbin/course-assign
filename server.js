@@ -6,7 +6,24 @@ var express = require('express');
 
 app
     .use(express.static('./public'))
-    .get('*',function(req,res){
-        res.sendfile('public/main.html');
+    .get('/',function(req,res){
+        res.sendFile(__dirname + '/public/main.html');
     })
-    .listen(3000);
+    .get('/login',function(req,res){
+        res.sendFile(__dirname + '/public/login.html');
+    })
+    .get('/course',function(req,res){
+        res.sendFile(__dirname + '/public/views/course.html');
+    })
+    .get('/course-assign',function(req,res){
+        res.sendFile(__dirname + '/public/views/course-assign.html');
+    })
+    .get('/faculty',function(req,res){
+        res.sendFile(__dirname + '/public/views/faculty.html');
+    })
+    .get('*',function(req,res){
+        res.sendFile(__dirname + '/public/login.html');
+    })
+    .listen(3000,function(){
+        console.log('server running in port 3000');
+    });
