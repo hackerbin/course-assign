@@ -24,6 +24,4 @@ app
     .get('*',function(req,res){
         res.sendFile(__dirname + '/public/login.html');
     })
-    .listen(3000,function(){
-        console.log('server running in port 3000');
-    });
+    .listen(process.env.PORT || 3000);
