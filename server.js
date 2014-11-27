@@ -3,6 +3,7 @@
  */
 var express = require('express');
     app = express();
+    cool = require('cool-ascii-faces');
 
 app
     .use(express.static('./public'))
@@ -23,5 +24,8 @@ app
     })
     .get('*',function(req,res){
         res.sendFile(__dirname + '/public/login.html');
+    })
+    .get('/', function(req, res){
+        res.send(cool());
     })
     .listen(process.env.PORT || 3000);
